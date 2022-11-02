@@ -1,23 +1,20 @@
-import { Canvas } from '@react-three/fiber';
-import React, { Suspense } from 'react';
-import Banner from '../Banner/Banner';
-import Limitedoffer from '../Limitedoffer/Limitedoffer';
-
+import React from "react";
+import Banner from "../Banner/Banner";
+import Loadcars from "../Loadcars/Loadcars";
+import WhatAChieve from "../WhatAChieve/WhatAChieve";
+import Limitedoffer from "../Limitedoffer/Limitedoffer";
+import Whyus from "../Whyus/Whyus";
 
 const Home = () => {
-    return (
-        <div>
-            <Banner></Banner>
-            <Limitedoffer></Limitedoffer>
-            <Canvas camera={{fov:70,position: [0,0,65]}}>
-                <Suspense fallback={null}>
-                    <ambientLight></ambientLight>
-
-                </Suspense>
-            </Canvas>
-            
-        </div>
-    );
+  return (
+    <div>
+      <Banner></Banner>
+      <Limitedoffer></Limitedoffer>
+      <Whyus></Whyus>
+      <WhatAChieve></WhatAChieve>
+      <Loadcars></Loadcars>
+    </div>
+  );
 };
 
 export default Home;

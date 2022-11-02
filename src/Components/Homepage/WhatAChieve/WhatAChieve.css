@@ -1,0 +1,56 @@
+.achievement-wrapper {
+  background-image: url("../../../Images/box-promo01.jpg");
+  color: white;
+}
+.achievement-container {
+  width: 80%;
+  margin: auto;
+  padding: 5% 0;
+}
+.achievement-container h1 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 43px;
+}
+.achievement-container p {
+    color: #dd3d53;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  margin-bottom: 5%;
+}
+
+.number-container{
+    display: flex;
+    margin: auto;
+}
+.single-Achievement {
+  width: 30%;
+}
+.acheivement-title {
+  margin: 5%;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 600;
+}
+.round {
+  border: 2px solid white;
+  outline: 5px groove red;
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.round h1 {
+  font-weight: 400;
+  margin-top: 5%;
+}
+
+.achievement-icon {
+  color: #d7354c;
+  font-size: 2.5rem;
+}

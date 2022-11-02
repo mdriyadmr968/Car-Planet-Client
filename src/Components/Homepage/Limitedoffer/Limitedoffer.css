@@ -1,8 +1,50 @@
 .Limited-wrapper{
      background-repeat: no-repeat, repeat;
-     background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+     background:linear-gradient(-55deg, #ff7675 29%, #d63031 29.1%, #d63031 68%, #ff7675 68.1%);
 }
 .Limited-container{
     width: 80%;
     margin: auto;
 }
+* {
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #5dafb8;
+  color:white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card {
+  height: 50vh;
+  border-radius: 13px;
+  box-shadow: 20px 40px 33px rgba(0,0,0,0.3);
+  padding: 2rem;
+  width: 35vw;
+  background-color:  #6cc2ce;
+
+}
+
+.product-canvas {
+  width: 35vw;
+  height: 38vh;
+  background:white;
+  box-shadow:  10px 15px 15px 6px #3891b4;
+  border-radius: 0px;
+  margin-bottom:20px
+
+}
+
+.colors {
+display:flex;
+flex-direction:row;
+}
+
+.colors div {padding:8px;}
