@@ -1,0 +1,8 @@
+.Limited-wrapper{
+     background-repeat: no-repeat, repeat;
+     background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+}
+.Limited-container{
+    width: 80%;
+    margin: auto;
+}
