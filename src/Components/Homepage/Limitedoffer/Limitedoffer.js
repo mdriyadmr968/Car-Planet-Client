@@ -1303,46 +1303,55 @@ const Limitedoffer = () => {
   const [stripes, setStripes] = useState("#ffffff");
   const [soul, setSoul] = useState("#ffffff");
   return (
-    <div className="Limited-wrapper">
-      <div className="Limited-container">
-        <Row>
-          <Col xs={12} md={6}>
-            <div>
-              <h3>Limited time offer</h3>
-              <h1>Marcediz Benz Pro 2.0Marcediz Benz Pro 2.0</h1>
-              <h4>
-                Authoritatively synthesize integrated value through flexible
-                metrics. Seamlessly evolve scenarios without customer directed
-                channels.
-              </h4>
-              <button className="btn btn-danger">Book Now</button>
-            </div>
-          </Col>
-          <Col xs={12} md={6}>
-            <Canvas>
-              <Suspense fallback={null}>
-                <ambientLight />
-                <spotLight
-                  intensity={0.9}
-                  angle={0.1}
-                  penumbra={1}
-                  position={[10, 15, 10]}
-                  castShadow
-                />
-                <Model
-                  customColors={{ mesh: mesh, stripes: stripes, soul: soul }}
-                />
-                <OrbitControls
-                  enablePan={true}
-                  enableZoom={true}
-                  enableRotate={true}
-                />
-              </Suspense>
-            </Canvas>
-          </Col>
-        </Row>
+    <>
+      <div className="Limited-header">
+        <h1>Limited Time Offer</h1>
+        <h5>
+          Dynamically unleash market positioning convergence for scalable
+          infrastructures Rapidiously virtual infrastructures rather than
+          market-driven action items.
+        </h5>
       </div>
-    </div>
+      <div className="Limited-wrapper">
+        <div className="Limited-container">
+          <Row>
+            <Col xs={12} md={6}>
+              <div>
+                <h1>Marcediz Benz Pro 2.0Marcediz Benz Pro 2.0</h1>
+                <h4>
+                  Authoritatively synthesize integrated value through flexible
+                  metrics. Seamlessly evolve scenarios without customer directed
+                  channels.
+                </h4>
+                <button className="btn btn-danger booknow-button">Book Now</button>
+              </div>
+            </Col>
+            <Col xs={12} md={6}>
+              <Canvas>
+                <Suspense fallback={null}>
+                  <ambientLight />
+                  <spotLight
+                    intensity={0.9}
+                    angle={0.1}
+                    penumbra={1}
+                    position={[10, 15, 10]}
+                    castShadow
+                  />
+                  <Model
+                    customColors={{ mesh: mesh, stripes: stripes, soul: soul }}
+                  />
+                  <OrbitControls
+                    enablePan={true}
+                    enableZoom={true}
+                    enableRotate={true}
+                  />
+                </Suspense>
+              </Canvas>
+            </Col>
+          </Row>
+        </div>
+      </div>
+    </>
   );
 };
 
