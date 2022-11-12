@@ -30,9 +30,8 @@ a {
 .header li {
   text-decoration: none;
   display: block;
-  padding: 25px 10px;
-  border-right: 1px solid #f4f4f4;
-  text-decoration: none;
+  padding: 25px 0 25px 0px;
+  /* border-right: 1px solid #f4f4f4; */
 }
 li a {
   text-decoration: none;
@@ -57,7 +56,6 @@ li a {
 }
 
 /* menu */
-
 
 .header .menu {
   clear: both;
@@ -138,7 +136,7 @@ li a {
     float: left;
   }
   .header li a {
-    padding: 20px 30px;
+    padding: 20px 10px;
   }
   .header .menu {
     clear: none;

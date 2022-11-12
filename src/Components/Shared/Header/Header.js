@@ -1,9 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 import "./Header.css";
 
 const Header = () => {
+  const { user, logOut } = useAuth();
   const navigate = useNavigate();
   return (
     <div>
@@ -20,23 +22,41 @@ const Header = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/services">Services</Link>
+            <Link to="/explore">Explore more cars</Link>
           </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link to="/register">Register</Link>
-          </li>
-          <li>
-            <button
-              type="button"
-              class="btn btn-warning"
-              onClick={() => navigate("/login")}
-            >
-              Login
-            </button>
-          </li>
+          {/* CONDIOTIONAL RENDERING BASE ON THE AUNTHENTICATION STATUS OF USER */}
+          {user.email ? (
+            <>
+              <li>
+                <Link to={`/dashboard`}>Dashboard</Link>
+              </li>
+              {user.displayName ? (
+                <li>
+                  <span>{user.displayName}</span>
+                </li>
+              ) : (
+                <li>
+                  <span>Your account</span>
+                </li>
+              )}
+              <li>
+                <button className="btn btn-danger" onClick={logOut}> Logout</button>
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link to="/login">
+                  <button className="btn btn-primary">Login</button>
+                </Link>
+              </li>
+              <li>
+                <Link to="/register">
+                  <button className="btn btn-danger">Register</button>
+                </Link>
+              </li>
+            </>
+          )}
         </ul>
       </header>
     </div>
