@@ -38,32 +38,11 @@ const Register = () => {
         <div className="col-md-6">
           <input
             type="text"
-            placeholder="your name"
-            id="name"
-            onBlur={handleNameChange}
-            required
-            className="form-control w-75"
+            className="w-75 my-2"
+            placeholder="Enter username"
           />
-          <br />
-          <input
-            type="email"
-            name=""
-            onBlur={handleEmailChange}
-            id="email"
-            placeholder="your email"
-            required
-            className="form-control w-75"
-          />
-          <br />
-          <input
-            type="password"
-            name=""
-            id="password"
-            onBlur={handlePasswordChange}
-            placeholder="your password"
-            required
-            className="form-control w-75"
-          />
+          <input type="text" className="w-75" placeholder="Enter password" />
+          <input type="text" className="w-75 my-2" placeholder="Confirm Password" />
           <button className="btn btn-dark w-75 my-4" onClick={handleSubmit}>
             Submit
           </button>

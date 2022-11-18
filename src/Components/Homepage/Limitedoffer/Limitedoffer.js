@@ -1323,7 +1323,7 @@ const Limitedoffer = () => {
                   metrics. Seamlessly evolve scenarios without customer directed
                   channels.
                 </h4>
-                <button className="btn btn-danger booknow-button">Book Now</button>
+                <button className="btn btn-warning booknow-button">Book Now</button>
               </div>
             </Col>
             <Col xs={12} md={6}>

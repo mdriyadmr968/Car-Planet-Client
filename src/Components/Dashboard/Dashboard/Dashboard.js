@@ -38,13 +38,13 @@ const Dashboard = () => {
                     <Link to="manageAllOrders">Manage All Orders</Link>
                   </MenuItem>
                   <MenuItem>
-                    <Link to="addProduct">Add a Product</Link>
+                    <Link to="addProduct">Add a CAR</Link>
                   </MenuItem>
                   <MenuItem>
                     <Link to="makeAdmin">Make Admin</Link>
                   </MenuItem>
                   <MenuItem>
-                    <Link to="manageProducts">Manage Products</Link>
+                    <Link to="manageProducts">Manage all Car</Link>
                   </MenuItem>
                   <MenuItem>
                     <Link to="/">Go to Home</Link>

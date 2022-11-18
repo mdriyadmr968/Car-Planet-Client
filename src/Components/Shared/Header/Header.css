@@ -17,6 +17,7 @@ a {
   position: fixed;
   width: 100%;
   z-index: 3;
+  padding-right: 10%;
 }
 
 .header ul {
@@ -30,7 +31,7 @@ a {
 .header li {
   text-decoration: none;
   display: block;
-  padding: 25px 0 25px 0px;
+  padding: 25px 20px 25px 0px;
   /* border-right: 1px solid #f4f4f4; */
 }
 li a {

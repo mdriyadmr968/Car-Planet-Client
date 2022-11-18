@@ -20,7 +20,7 @@ const AddReview = () => {
   return (
     <div
       className="container mt-5"
-      style={{ height: "100vh", marginBottom: "200px" }}
+      style={{ height: "100vh", width: "90vh", marginBottom: "200px" }}
     >
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-3">

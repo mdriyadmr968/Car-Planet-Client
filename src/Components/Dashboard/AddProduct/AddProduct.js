@@ -3,13 +3,13 @@ import React from "react";
 import { useForm } from "react-hook-form";
 const AddProduct = () => {
   const { register, handleSubmit, reset } = useForm();
-  document.title = "Add a Product";
+  document.title = "Add a Car";
   const onSubmit = (data) => {
     axios
       .post("https://hidden-eyrie-12216.herokuapp.com/addProduct", data)
       .then((res) => {
         if (res.data.insertedId) {
-          alert("Product added");
+          alert("Car has been added Successfully");
           reset();
         }
       });
@@ -65,7 +65,7 @@ const AddProduct = () => {
           //   className="btn btn-primary"
           type="submit"
           className="btn btn-dark"
-          value="Add Product"
+          value="Add CAR"
         />
       </form>
     </div>

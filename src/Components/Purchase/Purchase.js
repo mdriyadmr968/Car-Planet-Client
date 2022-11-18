@@ -26,7 +26,7 @@ const Purchase = () => {
       .post("https://hidden-eyrie-12216.herokuapp.com/purchasedCars", data)
       .then((res) => {
         if (res.data.acknowledged) {
-          alert("Your Car has been Purchased successfully");
+          alert("Order placed successfully");
           history.push("/");
           reset();
         }
@@ -138,7 +138,7 @@ const Purchase = () => {
                   <input
                     className="btn btn-dark"
                     type="submit"
-                    value="Register Trip"
+                    value="Place Order"
                   />
                 </form>
               </div>

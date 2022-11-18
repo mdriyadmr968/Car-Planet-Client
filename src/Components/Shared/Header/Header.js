@@ -17,7 +17,7 @@ const Header = () => {
         <label class="menu-icon" for="menu-btn">
           <span class="navicon"></span>
         </label>
-        <ul class="menu">
+        <ul class="menu allnavLink">
           <li>
             <Link to="/">Home</Link>
           </li>

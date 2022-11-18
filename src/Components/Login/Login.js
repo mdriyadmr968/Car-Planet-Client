@@ -28,35 +28,21 @@ const Login = () => {
   };
 
   return (
-    <div className="container margin-bottom">
+    <div className="login-container margin-bottom">
       <h1 className="text-center my-2">Login</h1>
       <div className="row align-items-md-center">
         <div className="col-md-6">
           <input
-            type="email"
-            name=""
-            onBlur={handleEmail}
-            id="email"
-            placeholder="your email"
-            required
-            className="form-control w-75"
+            type="text"
+            className="w-75 my-2"
+            placeholder="Enter username"
           />
-          <br />
-          <input
-            type="password"
-            name=""
-            id="password"
-            onBlur={handlePassword}
-            placeholder="your password"
-            required
-            className="form-control w-75"
-          />
+          <input type="text" className="w-75" placeholder="Enter password" />
           <button className="btn btn-dark w-75 my-4" onClick={handleLogIn}>
             Submit
           </button>
           <div className="mb-3">--------OR-----------</div>
           <button className="btn btn-dark w-75" onClick={handleGoogleLogIn}>
-            {" "}
             Login with google
           </button>
           <p className="lead my-2">
