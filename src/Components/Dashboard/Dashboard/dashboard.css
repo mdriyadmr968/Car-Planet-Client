@@ -6,3 +6,6 @@
   background-color: blueviolet;
   text-align: left;
 }
+.dashboard-content {
+  width: 500px !important;
+}
