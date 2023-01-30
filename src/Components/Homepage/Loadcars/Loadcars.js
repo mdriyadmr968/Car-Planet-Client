@@ -7,7 +7,7 @@ const Loadcars = () => {
   const [cars, setCars] = useState([]);
   useEffect(() => {
     axios
-      .get("https://hidden-eyrie-12216.herokuapp.com/allCars")
+      .get("https://car-planet-server.vercel.app/allCars")
 
       .then((res) => setCars(res.data.slice(0, 6)));
   }, []);

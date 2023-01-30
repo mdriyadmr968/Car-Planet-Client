@@ -7,7 +7,7 @@ const ManageAllOrders = () => {
   document.title = "Manage All Trips";
   useEffect(() => {
     axios
-      .get("https://hidden-eyrie-12216.herokuapp.com/manageAllOrders")
+      .get("https://car-planet-server.vercel.app/manageAllOrders")
       .then((res) => setManageAllOrders(res.data));
   }, [status]);
 
@@ -17,7 +17,7 @@ const ManageAllOrders = () => {
     if (proceed) {
       axios
         .delete(
-          `https://hidden-eyrie-12216.herokuapp.com/deletePurchasedCars/${id}`
+          `https://car-planet-server.vercel.app/deletePurchasedCars/${id}`
         )
         .then((res) => {
           if (res.data.deletedCount > 0) {
@@ -33,7 +33,7 @@ const ManageAllOrders = () => {
   // Handle Edit Status
   const handleEditStatus = (id) => {
     axios
-      .put(`https://hidden-eyrie-12216.herokuapp.com/updateStatus/${id}`)
+      .put(`https://car-planet-server.vercel.app/updateStatus/${id}`)
       .then((res) => {
         if (res.data.modifiedCount > 0) {
           alert("Car has been Shipped Succesfully");

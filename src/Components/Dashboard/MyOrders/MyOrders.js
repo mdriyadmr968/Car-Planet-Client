@@ -9,7 +9,7 @@ const MyOrders = () => {
   const email = user.email;
   useEffect(() => {
     axios
-      .get(`https://hidden-eyrie-12216.herokuapp.com/myOrders/${email}`)
+      .get(`https://car-planet-server.vercel.app/myOrders/${email}`)
       .then((res) => setMyOrders(res.data));
   }, []);
 
@@ -19,7 +19,7 @@ const MyOrders = () => {
     const proceed = window.confirm("Are you sure, you want to delete ?");
     if (proceed) {
       axios
-        .delete(`https://hidden-eyrie-12216.herokuapp.com/deleteCar/${id}`)
+        .delete(`https://car-planet-server.vercel.app/deleteCar/${id}`)
         .then((res) => {
           if (res.data.deletedCount > 0) {
             const remaining = myOrders.filter((car) => car._id !== id);

@@ -12,7 +12,7 @@ const Purchase = () => {
   const newData = details.find((datas) => datas._id === carID);
   useEffect(() => {
     axios
-      .get("https://hidden-eyrie-12216.herokuapp.com/allCars")
+      .get("https://car-planet-server.vercel.app/allCars")
 
       .then((res) => setDetails(res.data));
   }, []);
@@ -23,7 +23,7 @@ const Purchase = () => {
     data.img = newData?.img;
     data.status = "Pending";
     axios
-      .post("https://hidden-eyrie-12216.herokuapp.com/purchasedCars", data)
+      .post("https://car-planet-server.vercel.app/purchasedCars", data)
       .then((res) => {
         if (res.data.acknowledged) {
           alert("Order placed successfully");

@@ -6,7 +6,7 @@ const ManageProducts = () => {
   document.title = "Manage All Trips";
   useEffect(() => {
     axios
-      .get("https://hidden-eyrie-12216.herokuapp.com/allCars")
+      .get("https://car-planet-server.vercel.app/allCars")
       .then((res) => setManageProducts(res.data));
   }, []);
 
@@ -16,7 +16,7 @@ const ManageProducts = () => {
     const proceed = window.confirm("Are you sure, you want to delete ?");
     if (proceed) {
       axios
-        .delete(`https://hidden-eyrie-12216.herokuapp.com/allCars/${id}`)
+        .delete(`https://car-planet-server.vercel.app/allCars/${id}`)
         .then((res) => {
           if (res.data.deletedCount > 0) {
             const remaining = manageProducts.filter(

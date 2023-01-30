@@ -8,7 +8,7 @@ const MakeAdmin = () => {
 
   const handleAdminSubmit = (e) => {
     const user = { email };
-    fetch("https://hidden-eyrie-12216.herokuapp.com/users/admin", {
+    fetch("https://car-planet-server.vercel.app/users/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",
