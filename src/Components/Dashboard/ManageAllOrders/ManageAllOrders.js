@@ -7,7 +7,7 @@ const ManageAllOrders = () => {
   document.title = "Manage All Trips";
   useEffect(() => {
     axios
-      .get("https://car-planet-server.vercel.app/manageAllOrders")
+      .get("https://car-planet-server-mdriyadmr968.vercel.app/manageAllOrders")
       .then((res) => setManageAllOrders(res.data));
   }, [status]);
 
@@ -17,7 +17,7 @@ const ManageAllOrders = () => {
     if (proceed) {
       axios
         .delete(
-          `https://car-planet-server.vercel.app/deletePurchasedCars/${id}`
+          `https://car-planet-server-mdriyadmr968.vercel.app/deletePurchasedCars/${id}`
         )
         .then((res) => {
           if (res.data.deletedCount > 0) {
@@ -33,7 +33,9 @@ const ManageAllOrders = () => {
   // Handle Edit Status
   const handleEditStatus = (id) => {
     axios
-      .put(`https://car-planet-server.vercel.app/updateStatus/${id}`)
+      .put(
+        `https://car-planet-server-mdriyadmr968.vercel.app/updateStatus/${id}`
+      )
       .then((res) => {
         if (res.data.modifiedCount > 0) {
           alert("Car has been Shipped Succesfully");

@@ -10,7 +10,7 @@ const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
     axios
-      .get("https://car-planet-server.vercel.app/reviews")
+      .get("https://car-planet-server-mdriyadmr968.vercel.app/reviews")
       .then((res) => setReviews(res.data));
   }, []);
 

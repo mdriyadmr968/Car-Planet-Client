@@ -8,7 +8,7 @@ const MakeAdmin = () => {
 
   const handleAdminSubmit = (e) => {
     const user = { email };
-    fetch("https://car-planet-server.vercel.app/users/admin", {
+    fetch("https://car-planet-server-mdriyadmr968.vercel.app/users/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -6,7 +6,10 @@ const AddProduct = () => {
   document.title = "Add a Car";
   const onSubmit = (data) => {
     axios
-      .post("https://car-planet-server.vercel.app/addProduct", data)
+      .post(
+        "https://car-planet-server-mdriyadmr968.vercel.app/addProduct",
+        data
+      )
       .then((res) => {
         if (res.data.insertedId) {
           alert("Car has been added Successfully");

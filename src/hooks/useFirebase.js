@@ -76,7 +76,9 @@ const useFirebase = () => {
   };
   //fetching all the admins from the database
   useEffect(() => {
-    fetch(`https://car-planet-server.vercel.app/users/${user.email}`)
+    fetch(
+      `https://car-planet-server-mdriyadmr968.vercel.app/users/${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user.email]);
@@ -110,7 +112,7 @@ const useFirebase = () => {
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
     console.log(`I am ${email}`);
-    fetch("https://car-planet-server.vercel.app/users", {
+    fetch("https://car-planet-server-mdriyadmr968.vercel.app/users", {
       method: method,
       headers: {
         "content-type": "application/json",

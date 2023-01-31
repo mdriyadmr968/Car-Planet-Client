@@ -8,7 +8,7 @@ const AddReview = () => {
 
     const onSubmit = (data) => {
       axios
-        .post("https://car-planet-server.vercel.app/reviews", data)
+        .post("https://car-planet-server-mdriyadmr968.vercel.app/reviews", data)
         .then((res) => {
           if (res.data.insertedId) {
             alert("Your Review has been  Added");

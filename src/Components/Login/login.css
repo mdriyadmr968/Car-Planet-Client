@@ -3,4 +3,8 @@ a {
 }
 .login-container {
   width: 80%;
+  margin: auto;
+}
+.login-top{
+  padding-top: 12%;
 }

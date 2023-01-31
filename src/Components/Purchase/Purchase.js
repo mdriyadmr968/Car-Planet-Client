@@ -12,7 +12,7 @@ const Purchase = () => {
   const newData = details.find((datas) => datas._id === carID);
   useEffect(() => {
     axios
-      .get("https://car-planet-server.vercel.app/allCars")
+      .get("https://car-planet-server-mdriyadmr968.vercel.app/allCars")
 
       .then((res) => setDetails(res.data));
   }, []);
@@ -23,7 +23,10 @@ const Purchase = () => {
     data.img = newData?.img;
     data.status = "Pending";
     axios
-      .post("https://car-planet-server.vercel.app/purchasedCars", data)
+      .post(
+        "https://car-planet-server-mdriyadmr968.vercel.app/purchasedCars",
+        data
+      )
       .then((res) => {
         if (res.data.acknowledged) {
           alert("Order placed successfully");

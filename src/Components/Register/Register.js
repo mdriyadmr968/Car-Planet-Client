@@ -33,16 +33,28 @@ const Register = () => {
 
   return (
     <div className="container  margin-bottom">
-      <h1 className="text-center my-2">Register an account</h1>
+      <h1 className="text-center register-top">Register an account</h1>
       <div className="row align-items-md-center">
         <div className="col-md-6">
           <input
             type="text"
-            className="w-75 my-2"
+            className="w-75 mt-5"
             placeholder="Enter username"
+            onBlur={handleNameChange}
+          />
+          <input
+            type="email"
+            className="w-75 my-2"
+            placeholder="Enter Email"
+            onBlur={handleEmailChange}
           />
           <input type="text" className="w-75" placeholder="Enter password" />
-          <input type="text" className="w-75 my-2" placeholder="Confirm Password" />
+          <input
+            type="text"
+            className="w-75 my-2"
+            placeholder="Confirm Password"
+            onBlur={handlePasswordChange}
+          />
           <button className="btn btn-dark w-75 my-4" onClick={handleSubmit}>
             Submit
           </button>
