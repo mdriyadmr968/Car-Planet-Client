@@ -21,7 +21,7 @@ const Login = () => {
     e.preventDefault();
     try {
       await logInUsingGoogle(navigate, location);
-      alert("Login successful");
+      window.alert("Login successful");
     } catch (error) {
       console.error(error);
     }
