@@ -30,6 +30,9 @@ const Header = () => {
               <li>
                 <Link to={`/dashboard`}>Dashboard</Link>
               </li>
+              <li>
+                <Link to={`/admin`}>Admin</Link>
+              </li>
               {user.displayName ? (
                 <li>
                   <span>{user.displayName}</span>
@@ -39,8 +42,12 @@ const Header = () => {
                   <span>Your account</span>
                 </li>
               )}
+
               <li>
-                <button className="btn btn-danger" onClick={logOut}> Logout</button>
+                <button className="btn btn-danger" onClick={logOut}>
+                  {" "}
+                  Logout
+                </button>
               </li>
             </>
           ) : (

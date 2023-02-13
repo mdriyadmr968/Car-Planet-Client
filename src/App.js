@@ -2,13 +2,13 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import AddProduct from "./Components/Dashboard/AddProduct/AddProduct";
 import AddReview from "./Components/Dashboard/AddReview/AddReview";
+import AdminDashboard from "./Components/Dashboard/AdminDashboard/AdminDashboard";
+import AdminHome from "./Components/Dashboard/AdminDashboardHome/AdminHome";
 import Dashboard from "./Components/Dashboard/Dashboard/Dashboard";
 import DashboardHome from "./Components/Dashboard/DashboardHome/DashboardHome";
-import MakeAdmin from "./Components/Dashboard/MakeAdmin/MakeAdmin";
 import ManageAllOrders from "./Components/Dashboard/ManageAllOrders/ManageAllOrders";
 import ManageProducts from "./Components/Dashboard/ManageProducts/ManageProducts";
 import MyOrders from "./Components/Dashboard/MyOrders/MyOrders";
-import Payment from "./Components/Dashboard/Payment/Payment";
 import Explore from "./Components/Explore/Explore";
 import Home from "./Components/Homepage/Home/Home";
 import Login from "./Components/Login/Login";
@@ -33,13 +33,6 @@ function App() {
               <Route path="" element={<DashboardHome />}></Route>
               <Route path="myOrders" element={<MyOrders />}></Route>
               <Route path="reviews" element={<AddReview />}></Route>
-              <Route
-                path="manageAllOrders"
-                element={<ManageAllOrders />}
-              ></Route>
-              <Route path="addProduct" element={<AddProduct />}></Route>
-              <Route path="makeAdmin" element={<MakeAdmin />}></Route>
-              <Route path="manageProducts" element={<ManageProducts />}></Route>
             </Route>
             <Route
               path="/purchase/:carID"
@@ -49,6 +42,16 @@ function App() {
                 </RequireAuth>
               }
             ></Route>
+
+            <Route path="/admin" element={<AdminDashboard />}>
+              <Route path="" element={<AdminHome />}></Route>
+              <Route
+                path="manageAllOrders"
+                element={<ManageAllOrders />}
+              ></Route>
+              <Route path="addProduct" element={<AddProduct />}></Route>
+              <Route path="manageProducts" element={<ManageProducts />}></Route>
+            </Route>
             <Route path="/explore" element={<Explore />}></Route>
           </Routes>
           <Footer />
