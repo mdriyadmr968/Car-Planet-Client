@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import useAuth from "../../hooks/useAuth";
 import "../Register/register.css";
 import "./login.css";
+import { getAuth } from "firebase/auth";
+import app from "../../Firebase/firebase.init";
+
+const auth = getAuth(app);
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { logInUsingGoogle, emailAndPasswordSignIn } = useAuth();
+  const [signInWithGoogle, user] = useSignInWithGoogle(auth);
   const location = useLocation();
   const navigate = useNavigate();
   const handleEmail = (e) => {
@@ -17,24 +23,26 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
-  const handleGoogleLogIn = async (e) => {
-    e.preventDefault();
-    try {
-      await logInUsingGoogle(navigate, location);
-      window.alert("Login successful");
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  const from = location?.state?.from?.pathname || "/";
 
-  const handleLogIn = (e) => {
-    e.preventDefault();
-    emailAndPasswordSignIn(email, password, location, navigate)
-      .then(() => {
-        navigate("/");
+  const handleGoogleLogIn = () => {
+    signInWithGoogle()
+      .then((result) => {
+        // const { displayName, email, photoURL } = result.user;
+        // const signedInUser = { name: displayName, email, img: photoURL };
+        // setLoggedInUser(signedInUser);
+        navigate(from, { replace: true });
+      })
+      .then((data) => {
+        if (data) {
+          window.alert("logged in succesfully");
+        } else {
+          window.alert("logged in succesfully");
+        }
       })
       .catch((error) => {
-        console.error(error);
+        const errorMessage = error.message;
+        console.log(errorMessage);
       });
   };
 
@@ -55,7 +63,10 @@ const Login = () => {
             placeholder="Enter password"
             onBlur={handlePassword}
           />
-          <button className="btn btn-dark w-75 my-4" onClick={handleLogIn}>
+          <button
+            className="btn btn-dark w-75 my-4"
+            onClick={emailAndPasswordSignIn}
+          >
             Submit
           </button>
           <div className="mb-3">--------OR-----------</div>

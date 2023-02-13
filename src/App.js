@@ -14,6 +14,7 @@ import Home from "./Components/Homepage/Home/Home";
 import Login from "./Components/Login/Login";
 import Purchase from "./Components/Purchase/Purchase";
 import Register from "./Components/Register/Register";
+import RequireAuth from "./Components/RequireAuth/RequireAuth";
 import Footer from "./Components/Shared/Footer/Footer";
 import Header from "./Components/Shared/Header/Header";
 import AuthProvider from "./Context/AuthProvider";
@@ -40,7 +41,14 @@ function App() {
               <Route path="makeAdmin" element={<MakeAdmin />}></Route>
               <Route path="manageProducts" element={<ManageProducts />}></Route>
             </Route>
-            <Route path="/purchase/:carID" element={<Purchase />}></Route>
+            <Route
+              path="/purchase/:carID"
+              element={
+                <RequireAuth>
+                  <Purchase />
+                </RequireAuth>
+              }
+            ></Route>
             <Route path="/explore" element={<Explore />}></Route>
           </Routes>
           <Footer />

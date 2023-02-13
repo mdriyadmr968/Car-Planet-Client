@@ -9,10 +9,9 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
-import initAuth from "../Firebase/firebase.init";
-initAuth();
+import app from "../Firebase/firebase.init";
 const useFirebase = () => {
-  const auth = getAuth();
+  const auth = getAuth(app);
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [admin, setAdmin] = useState(false);
@@ -88,7 +87,7 @@ const useFirebase = () => {
   const logOut = () => {
     signOut(auth)
       .then(() => {
-        // Sign-out successful.
+        window.alert("logged Out successful");
       })
       .catch((error) => {
         // An error happened.

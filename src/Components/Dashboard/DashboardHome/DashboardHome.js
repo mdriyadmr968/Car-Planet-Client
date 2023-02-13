@@ -1,14 +1,24 @@
 import React from "react";
+import useAuth from "../../../hooks/useAuth";
+import useFirebase from "../../../hooks/useFirebase";
 
 const DashboardHome = () => {
+  const { admin } = useAuth();
   return (
     <div className="container mt-5">
       <div className="row align-items-center justify-content-center">
         <div className="col-12">
           <div className="">
-            <h3 className="text-center text-info fw-bold">
-              Welcome to the Dashboard
-            </h3>
+            {!admin && (
+              <h3 className="text-center text-info fw-bold">
+                Welcome to the user Dashboard
+              </h3>
+            )}
+            {admin && (
+              <h3 className="text-center text-info fw-bold">
+                Welcome to the Admin Dashboard
+              </h3>
+            )}
           </div>
         </div>
         <div className="col-12 ">

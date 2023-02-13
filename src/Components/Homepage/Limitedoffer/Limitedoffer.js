@@ -1299,9 +1299,6 @@ function Model(props) {
 }
 
 const Limitedoffer = () => {
-  const [mesh, setMesh] = useState("#ffffff");
-  const [stripes, setStripes] = useState("#ffffff");
-  const [soul, setSoul] = useState("#ffffff");
   return (
     <>
       <div className="Limited-header">
@@ -1315,7 +1312,7 @@ const Limitedoffer = () => {
       <div className="Limited-wrapper">
         <div className="Limited-container">
           <Row>
-            <Col xs={12} md={6}>
+            <Col xs={12} md={5}>
               <div>
                 <h1>Marcediz Benz Pro 2.0Marcediz Benz Pro 2.0</h1>
                 <h4>
@@ -1323,10 +1320,12 @@ const Limitedoffer = () => {
                   metrics. Seamlessly evolve scenarios without customer directed
                   channels.
                 </h4>
-                <button className="btn btn-warning booknow-button">Book Now</button>
+                <button className="btn btn-warning booknow-button">
+                  Book Now
+                </button>
               </div>
             </Col>
-            <Col xs={12} md={6}>
+            <Col xs={12} md={7}>
               <Canvas>
                 <Suspense fallback={null}>
                   <ambientLight />
@@ -1337,12 +1336,12 @@ const Limitedoffer = () => {
                     position={[10, 15, 10]}
                     castShadow
                   />
-                  <Model
-                    customColors={{ mesh: mesh, stripes: stripes, soul: soul }}
-                  />
+                  <Model />
                   <OrbitControls
+                    autoRotate={true}
+                    autoRotateSpeed={3}
                     enablePan={true}
-                    enableZoom={true}
+                    enableZoom={false}
                     enableRotate={true}
                   />
                 </Suspense>
